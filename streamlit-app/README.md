@@ -26,3 +26,8 @@ A Streamlit app that scrapes websites and generates reports.
 
 ## Note
 Please respect websites' terms of service and robots.txt files.
+## 🌐 Live Demo
+
+🚀 Click below to access the live Streamlit app hosted on Hugging Face Spaces:
+
+👉 [Open App on Hugging Face](https://huggingface.co/spaces/omnanda/web_scrapper)
