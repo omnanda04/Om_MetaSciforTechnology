@@ -5,6 +5,7 @@ from gtts import gTTS
 from io import BytesIO
 import base64
 from dotenv import load_dotenv
+import re
 
 # Load environment variables from .env
 load_dotenv()
@@ -24,7 +25,9 @@ st.set_page_config(page_title="AI Voice Bot", page_icon="🗣️", layout="cente
 
 # Text to speech
 def text_to_speech(text, lang='en', slow=False):
-    tts = gTTS(text=text, lang=lang, slow=slow)
+    # Remove special characters (e.g., asterisks) for speech
+    clean_text = re.sub(r'[^\w\s,.!?\'\"-]', '', text)
+    tts = gTTS(text=clean_text, lang=lang, slow=slow)
     audio_bytes = BytesIO()
     tts.write_to_fp(audio_bytes)
     audio_bytes.seek(0)
