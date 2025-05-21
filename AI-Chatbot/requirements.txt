@@ -4,3 +4,9 @@ gtts==2.5.1
 python-dotenv==1.0.1
 requests==2.31.0
 python-multipart==0.0.9
+streamlit
+gtts
+google-generativeai
+pydub
+SpeechRecognition
+python-dotenv
